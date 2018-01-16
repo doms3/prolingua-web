@@ -1,0 +1,23 @@
+# No dependencies
+/node_modules
+
+# No backup files
+*~
+*.swp
+
+# No data files
+*.iml
+*.xml
+
+# No Gradle files
+.gradle
+gradle
+build.gradle
+settings.gradle
+gradlew
+gradlew.bat
+
+# Don't include the prolingua base file
+/prolingua
+
+

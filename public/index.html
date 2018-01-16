@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<title>Prolingua</title>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+	
+	<script>
+		$( function() {
+			function getData() {
+				return {
+					text: $("#my_text").val(),
+					language: $("#my_selector option:selected").val()
+				}
+			}
+
+			$("#submit").click( () => {
+				$.post( 'compile', getData(), ( data ) => window.open( data.link ), 'json' );
+			} );
+		} )
+	</script>
+</head>
+
+<body>
+	<p>Please enter your prolingua code.</p>
+	<textarea id="my_text" cols="50" rows="20"></textarea>
+	<select id="my_selector">
+		<option value="english">English</option>
+		<option value="spanish">Spanish</option>
+	</select>
+	<button id="submit">Submit</button>
+</body>
+
+</html>
+
